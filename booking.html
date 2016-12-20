@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SFrench kostrådgivare - bokning</title>
+    <link href="css/green.css" rel="stylesheet" />
+
+    <!-- linking external javascript -->
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+<body>
+    <header id="above">
+        <ul id="slides">
+            <li class="slide showing"><img src="img/greens3.jpg" alt="greens"><div class="leftNum">1</div><div class="text">Caption Text</div></li>
+            <li class="slide"><img src="img/greens.jpg" alt="greens"><div class="leftNum">2</div><div class="text">Caption Text</div></li>
+            <li class="slide"><img src="img/greens2.jpg" alt="greens"><div class="leftNum">3</div><div class="text">Caption Text</div></li>
+            <li class="slide"><img src="img/greens.jpg" alt="greens"><div class="leftNum">4</div><div class="text">Caption Text</div></li>
+            <li class="slide"><img src="img/greens2.jpg" alt="greens"><div class="leftNum">5</div><div class="text">Caption Text</div></li>
+            <li class="slide"><img src="img/greens3.jpg" alt="greens"><div class="leftNum">6</div><div class="text">Caption Text</div></li>
+
+        </ul>
+        <section class="dots">
+            <span class="dot" id="dot0"></span>
+            <span class="dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+            <span class="dot" id="dot4"></span>
+            <span class="dot" id="dot5"></span>
+        </section>
+        <h1 class="logo">Sandra French Kostrådgivare</h1>
+    </header>
+
+    <header id="top">
+
+        <nav class="navmenu">
+            <a href="index.html">Om mig</a>
+            <a href="booking.html">Boka rådgivning</a>
+            <a href="articles.html">Artiklar</a>
+            <a href="gallery.html">Galleri</a>
+            <a href="samtal.html">Personligt Samtal</a>
+        </nav>
+
+    </header>
+    <section id="content" class="booking">
+        <section>
+            <h1>Kalendarbokning</h1>
+            <p>
+                En kostrådgivning brukar vara i ca 1 timme.
+                Du väljer själv om vi ses personligen, har samtal via telefon, skype eller mailkontakt. Allt detta för att det ska passa ditt liv och din vardag.
+            </p>
+            <p>Fyll i formuläret nedan och välj dag när du vill bli kontaktad så återkommer jag till dig</p>
+        </section>
+
+        <section id="part2">
+            <form id="bookForm" accept-charset="ISO-8859-1" name="bokning" onsubmit="return validateForm()" method="post" action="form-to-email.php">
+                <fieldset>
+                    <legend>Bokning</legend>
+                    <p>
+                        <label class="fixed">Förnamn</label>
+                        <input type="text" id="name1" name="fname" /><span id="errorMsg1"></span>
+                    </p>
+                    <p>
+                        <label class="fixed">Efternamn</label>
+                        <input type="text" id="name2" name="lname" /><span id="errorMsg2"></span>
+                    </p>
+                    <p>
+                        <label class="fixed">Telefonnummer</label>
+                        <input type="number" id="phone" name="phone" /><span id="errorMsg3"></span>
+                    </p>
+                    <p>
+                        <label class="fixed">Datum</label>
+                        <input type="text" id="datum" name="datum"
+                               placeholder="välj datum ->" />
+                    </p>
+                    <p>
+                        <label class="fixed">E-post</label>
+                        <input type="email" id="epost" name="epost"
+                               placeholder="Ange epost" /><span id="errorMsg4"></span>
+                    </p>
+                    <p>
+                        <textarea name="message" placeholder="Skriv ett meddelande"></textarea>
+                    </p>
+                    <p>
+                        <button id="saveButton" class="saveButton" type="submit" > Skicka</button>
+                        <input id="clearButton" type="button" value="Rensa">
+                    </p>
+                </fieldset>
+            </form>
+
+            <section id="cal">
+                <section class="header">
+                    <span class="left button" id="prev"> &lang; </span>
+                    <span class="left klam"></span>
+                    <span class="month-year" id="label"> November 2016 </span>
+                    <span class="right klam"></span>
+                    <span class="right button" id="next"> &rang; </span>
+                </section>
+
+                <table id="days">
+                    <tr>
+                        <td>Sön</td>
+                        <td>Mån</td>
+                        <td>Tis</td>
+                        <td>Ons</td>
+                        <td>Tors</td>
+                        <td>Fre</td>
+                        <td>Lör</td>
+                    </tr>
+                </table>
+                <section id="cal-frame">
+                    <table class="curr">
+                        <tbody>
+                            <tr><td class="nil"></td><td class="nil"></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+                            <tr><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                            <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+                            <tr><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td></tr>
+                            <tr><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+                        </tbody>
+                    </table>
+
+                </section>
+            </section>
+
+
+        </section>
+
+    </section>
+
+    <footer id="bottom">
+        <hr>
+        
+            <p>
+                © 2016 | Producerad av David Hegardt <a href="https://www.instagram.com/sandrafrench/?ref=badge" class="ig-b- ig-b-48" title="Min Instagram"><img src="//badges.instagram.com/static/images/ig-badge-48.png" alt="Instagram" /></a>
+            </p>
+        </footer>
+      
+</body>
+</html>
